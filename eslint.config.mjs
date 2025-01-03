@@ -16,6 +16,7 @@ const eslintConfig = [
 module.exports = {
   rules: {
     "@typescript-eslint/no-require-imports": "off", // Desativa a regra
+    "no-unused-vars": "error",
   },
 }
 
