@@ -10,19 +10,15 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 
 interface BarbershopPageProps {
-  params: {
-    id: string
-  }
+  params: { id: string }
 }
 
 const BarbershopPage = async ({ params }: BarbershopPageProps) => {
+  const { id } =  params
+
   const barbershop = await db.barbershop.findUnique({
-    where: {
-      id: params.id,
-    },
-    include: {
-      services: true,
-    },
+    where: { id },
+    include: { services: true },
   })
 
   if (!barbershop) {
@@ -39,7 +35,6 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
           className="object-cover"
           alt={barbershop.name}
         />
-
         <Button
           size="icon"
           variant="secondary"
@@ -50,7 +45,6 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
             <ChevronLeftIcon />
           </Link>
         </Button>
-
         <Sheet>
           <SheetTrigger asChild>
             <Button
@@ -77,13 +71,12 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
           <p className="text-sm">5,0 (499 avaliações)</p>
         </div>
       </div>
-      {/* DESCRIÇÃO */}
+
       <div className="space-y-3 border-b border-solid p-5">
         <h2 className="text-xs font-bold uppercase text-gray-400">Sobre nós</h2>
         <p className="text-justify text-sm">{barbershop.description}</p>
       </div>
 
-      {/* SERVIÇOS */}
       <div className="space-y-3 border-b border-solid p-5">
         <h2 className="text-xs font-bold uppercase text-gray-400">Serviços</h2>
         <div className="space-y-3">
