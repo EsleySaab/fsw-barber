@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **FSW Barber**
 
-## Getting Started
+Este projeto foi desenvolvido durante o curso **_Full Stack Club_**, sob a mentoria de **Felipe Rocha**, com o objetivo de criar um sistema de **agendamento de serviços** para barbearias. O foco foi aplicar **boas práticas de desenvolvimento**, utilizando tecnologias **modernas** e **escaláveis**, tanto no **_frontend_** quanto no **_backend_**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 **Tecnologias Usadas**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **Frontend**
+- **Next.js**: Framework React para construção de **interfaces modernas**.
+- **React**: Biblioteca JavaScript para criação de **interfaces de usuário**.
+- **TypeScript**: Para **tipagem estática** e maior **robustez** no desenvolvimento.
+- **TailwindCSS**: Estilização **rápida** e **eficiente**.
+- **ShadCN**: Biblioteca para criação de **componentes acessíveis**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **Backend**
+- **PostgreSQL**: Banco de dados **relacional robusto**.
+- **NeonDB**: Serviço em nuvem para **hospedagem** do banco de dados.
+- **Prisma**: ORM para **integração** e **manipulação de dados**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Outras Ferramentas e Bibliotecas**
+- **DateFNS**: Para **manipulação e formatação de datas**.
+- **Husky**: Automação de tarefas no controle de versão com **Git**.
+- **Lint-Staged**: Garantia de **qualidade de código** antes dos commits.
+- **Zod**: Validação de dados e **formulários dinâmicos**.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ⚙️ **Funcionalidades**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **📅 Agendamento de Serviços**: Sistema completo para **gestão de horários e serviços**.
+- **✅ Validação de Dados**: **Formulários** com feedback em **tempo real**.
+- **📱 Interface Responsiva**: Design **adaptado** para diferentes **tamanhos de tela**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🎯 **Objetivos**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Praticar e consolidar conhecimentos em **_desenvolvimento full stack_**.
+- Criar uma **aplicação real** utilizando **Next.js** e **Prisma**.
+- Implementar **boas práticas** como validação de dados e automação de processos.
+- Hospedar a aplicação em um ambiente produtivo utilizando **NeonDB**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🖼 **Layout do Projeto**
+
+### **Tela Inicial**
+![Tela Inicial](./public/tela-inicial.png)
+
+### **Informações da barbearia**
+![Informações da barbearia](./public/informacoes.png)
+
+### **Informações do agendamento**
+![Informações do agendamento](./public/informacoes-agendamento.png)
+
+
+### **Página de Agendamento**
+![Página de Agendamento](./public/agendamentos.png)
+
+---
+
+
+
+**💡 Aprendizado:** Este projeto foi **fundamental** para consolidar habilidades no **desenvolvimento full stack**, desde a **construção de interfaces modernas** até a **integração com banco de dados** e **deploy em produção**.
+
+**📬 Conecte-se comigo:**
+[**LinkedIn**](https://www.linkedin.com/in/esley-santana-521780325/)
