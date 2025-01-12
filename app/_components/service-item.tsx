@@ -23,6 +23,8 @@ import { getBookings } from "../_actions/get-bookings"
 import { Dialog, DialogContent } from "./ui/dialog"
 import SignInDialog from "./sign-in-dialog"
 import BookingSummary from "./booking-summary"
+import { ToastAction } from "./ui/toast"
+import { useRouter } from "next/navigation"
 
 interface ServiceItemProps {
   service: BarbershopService
@@ -81,6 +83,7 @@ const getTimeList = ({ bookings, selectedDay }: GetTimeListProps) => {
 }
 
 const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
+  const router = useRouter()
   const [signInDialogIsOpen, setSignInDialogIsOpen] = useState(false)
   const { data } = useSession()
   const [selectedDay, setSelectedDay] = useState<Date | undefined>(undefined)
@@ -148,6 +151,14 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
         title: "Sucesso!",
         description: "Reserva criada com sucesso!",
         variant: "default",
+        action: (
+          <ToastAction 
+            onClick={() => router.push("/bookings")}
+            altText="Agendamentos"
+          >
+            Agendamentos
+          </ToastAction>
+        ),
       })
     } catch (error) {
       console.log(error)
