@@ -28,11 +28,12 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
   return (
     <div>
       {/* IMAGEM */}
-      <div className="relative h-[250px] w-full">
+      <div className="relative h-[250px] w-full lg:m-auto lg:mt-4 lg:h-[600px] lg:w-[1000px]">
         <Image
           src={barbershop.imageUrl}
           fill
-          className="object-cover"
+          className="object-cover lg:rounded-xl"
+          quality={90}
           alt={barbershop.name}
         />
         <Button

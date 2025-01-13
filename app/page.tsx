@@ -46,7 +46,7 @@ const Home = async () => {
         </div>
 
         {/* BUSCA RÁPIDA */}
-        <div className="mt-6 flex gap-3 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
+        <div className="mt-6 flex gap-3 overflow-x-scroll lg:hidden [&::-webkit-scrollbar]:hidden">
           {quickSearchOptions.map((option) => (
             <Button
               className="gap-2"
@@ -68,7 +68,7 @@ const Home = async () => {
         </div>
 
         {/* IMAGEM */}
-        <div className="relative mb-3 mt-6 h-[150px] w-full">
+        <div className="relative mb-3 mt-6 h-[150px] w-full lg:hidden">
           <Image
             alt="Agende nos melhores com FSW Barber"
             src="/banner-01.png"
@@ -90,21 +90,21 @@ const Home = async () => {
           ))}
         </div>
 
-        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
+        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400 lg:text-lg">
           Recomendados
         </h2>
 
-        <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
+        <div className="flex gap-4 overflow-auto lg:flex lg:flex-wrap lg:gap-8 [&::-webkit-scrollbar]:hidden">
           {barbershops.map((barbershop) => (
             <BarbershopItem barbershop={barbershop} key={barbershop.id} />
           ))}
         </div>
 
-        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
+        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400 lg:text-lg">
           Populares
         </h2>
 
-        <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
+        <div className="flex gap-4 overflow-auto lg:flex lg:flex-wrap lg:gap-8 [&::-webkit-scrollbar]:hidden">
           {popularBarbershops.map((barbershop) => (
             <BarbershopItem barbershop={barbershop} key={barbershop.id} />
           ))}
